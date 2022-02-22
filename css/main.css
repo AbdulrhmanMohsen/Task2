@@ -6,10 +6,22 @@
 
 }
 
+
 .none {
     display: none;
 }
 
-/* .checked{
+.checked{
 text-decoration: line-through;
-} */
+}
+.btn-primary{
+    width: 25%;
+}
+
+@media(max-width:450px) {
+
+
+    .btn-primary{
+        width: 40%;
+    }
+}

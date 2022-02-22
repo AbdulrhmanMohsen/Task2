@@ -24,10 +24,10 @@ ${inputdata}
         taskinput.value = "";
     }
 }
-// tasks.addEventListener('click', function (e) {
-//     if (e.target.classList.contains('task'));
-//     e.target.classList.toggle('checked');
-// });
+tasks.addEventListener('click', function (e) {
+    if (e.target.classList.contains('task'));
+    e.target.classList.toggle('checked');
+});
 
 let shownotask = () => {
     if (tasks.children.length == 0) {
