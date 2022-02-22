@@ -3,81 +3,13 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto Condensed', sans-serif;
-    
-}
-.dark{
-    background-color: black;
+
 }
 
-body {}
-
-#intmain {
+.none {
     display: none;
-    
-
 }
 
-h1 {
-    font-weight: 700;
-    text-align: center;
-    margin: 60px auto;
-}
-h3{
-    margin-left: 225px;
-    font-weight: 700;
-}
-.main {
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    margin-bottom: 100px;
-    background-color: rgb(78, 84, 109);
-    height: 200px;
-    border-radius: 1rem;
-}
-.intmain{
-    width: 75%;
-    display: flex;
-    height: 50%;
-    justify-content: center;
-    align-items: center;
-}
-
-.intmain .btn {
-    margin-left: 10px;
-}
-.cont {
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    margin-bottom: 100px;
-    background-color: rgb(164, 167, 179);
-    height: 200px;
-    border-radius: 1rem;
-}
-
-.childcont {
-    width: 75%;
-    display: flex;
-    height: 50%;
-    justify-content: center;
-    align-items: center;
-}
-
-.childcont .btn {
-    margin-left: 10px;
-}
-#text:hover {
-    background-color: rgb(192, 178, 159);
-}
-#text {
-    font-weight: 700;
-background: none;
-border: 0;
-color: white;
-text-align: center;
-}
+/* .checked{
+text-decoration: line-through;
+} */

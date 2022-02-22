@@ -1,41 +1,52 @@
-let btn = document.getElementById('add');
-let input = document.querySelector('input');
-let pp = document.getElementById('text');
-let remove = document.getElementById('re');
-let intmain =document.getElementById('intmain')
-let h2 = document.getElementById('h2l')
+let taskinput = document.getElementById('taskinput');
+let taskbtn = document.getElementById('taskbtn');
+let notask = document.getElementById('notask');
+let tasks = document.getElementById('tasks');
+let invalid = document.getElementById('invalid');
+let closevm = document.getElementById('closevm');
 
-let show  = () => {
+let addtask = () => {
+    let inputdata = taskinput.value;
 
-    if(input.value ==0)
-alert('Fill vaild data')
-else{
-    let text = input.value;
-    pp.value = text;
-    intmain.style.display = 'block'
-    intmain.style.display = 'flex'
-    h2.style.display = 'none'
-}
+    if (taskinput.trim == 0 || taskinput.value.length < 3) {
+        invalid.classList.remove('none')
 
-}
-btn.addEventListener('click' , show);
-
-let removee = () => {
-    pp.value = ''
-    intmain.style.display = 'none'
-    h2.style.display = 'block'
-}
-remove.addEventListener('click' , removee)
-
-
-
-
-let dark =function(){
-    if(body.classList.toggle('dark')){
-        darklight.classList='btn btn-light fas fa-cloud';
-    }
-    else{
-        darklight.classList='btn btn-dark fas fa-moon';
+    } else {
+        notask.classList.add('none');
+        invalid.classList.add('none');
+        tasks.innerHTML += `
+<div class=' alert alert-primary '>
+${inputdata}
+<button type="button" class="btn btn-danger float-right ml-2 py-0 delete ">Delete</button>
+<button type="button"  class="btn btn-secondary float-right py-0 ">Edit</button>
+</div>
+`;
+        taskinput.value = "";
     }
 }
-darklightq.addEventListener('click',dark);
+// tasks.addEventListener('click', function (e) {
+//     if (e.target.classList.contains('task'));
+//     e.target.classList.toggle('checked');
+// });
+
+let shownotask = () => {
+    if (tasks.children.length == 0) {
+        notask.classList.remove('none');
+    }
+
+}
+
+let removeinvalid = () => {
+    invalid.classList.add('none');
+}
+
+document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('delete')) {
+        e.target.parentElement.remove();
+        shownotask();
+    }
+
+})
+
+taskbtn.addEventListener('click', addtask);
+closevm.addEventListener('click', removeinvalid);
